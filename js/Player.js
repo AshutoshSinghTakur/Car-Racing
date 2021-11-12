@@ -44,7 +44,7 @@ class Player {
   }
 
   static updateCarsEnd(rank){
-    database.ref("/").set({
+    database.ref('/').update({
       carsAtEnd: rank});
   }
 }

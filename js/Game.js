@@ -42,6 +42,8 @@ class Game {
 
   play(){
     form.hide();
+
+    console
     
     Player.getPlayerInfo();
     player.getCarsAtEnd();
@@ -92,7 +94,7 @@ class Game {
       player.update();
     }
 
-    if(player.distance > 1000){
+    if(player.distance > 3700){
       gameState = 2;
       player.rank = player.rank +1;
       Player.updateCarsEnd(player.rank);
@@ -104,5 +106,9 @@ class Game {
   end(){
     console.log("Game Ended");
     console.log(player.rank)
+    fill("white");
+    textSize(15);
+    text("Congratulation " + player.name + "Your Rank Is " + player.rank, windowWidth/2, camera.position.y);
+
   }
 }
